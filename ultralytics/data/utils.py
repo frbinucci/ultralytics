@@ -70,6 +70,7 @@ def exif_size(img: Image.Image):
 
 
 def verify_image(args):
+    print("XXXX")
     """Verify one image."""
     (im_file, cls), prefix = args
     # Number (found, corrupt), message
