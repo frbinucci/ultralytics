@@ -74,7 +74,7 @@ def verify_image(args):
     (im_file, cls), prefix = args
     # Number (found, corrupt), message
     nf, nc, msg = 0, 0, ""
-    try:
+    '''try:
         im = Image.open(im_file)
         im.verify()  # PIL verify
         shape = exif_size(im)  # image size
@@ -90,7 +90,8 @@ def verify_image(args):
         nf = 1
     except Exception as e:
         nc = 1
-        msg = f"{prefix}WARNING ⚠️ {im_file}: ignoring corrupt image/label: {e}"
+        msg = f"{prefix}WARNING ⚠️ {im_file}: ignoring corrupt image/label: {e}"'''
+    im_file = np.load(im_file)
     return (im_file, cls), nf, nc, msg
 
 
