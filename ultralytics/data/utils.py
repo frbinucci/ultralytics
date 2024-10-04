@@ -104,7 +104,7 @@ def verify_image_label(args):
         # Verify images
         if im_file.split(".")[-1]=='npy':
             im = np.load(im_file)
-            shape = (im_file.shape[0],im_file.shape[1])
+            shape = (im.shape[0],im.shape[1])
         else:
             im = Image.open(im_file)
             im.verify()  # PIL verify
