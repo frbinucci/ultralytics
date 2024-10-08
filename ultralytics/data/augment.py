@@ -198,7 +198,8 @@ class Compose:
             >>> transformed_data = compose(input_data)
         """
         for t in self.transforms:
-            data = t(data)
+            pass
+            #data = t(data)
         return data
 
     def append(self, transform):
