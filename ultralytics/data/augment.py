@@ -200,7 +200,7 @@ class Compose:
         for t in self.transforms:
             pass
             #data = t(data)
-        return data
+        return torch.from_numpy(data)
 
     def append(self, transform):
         """
