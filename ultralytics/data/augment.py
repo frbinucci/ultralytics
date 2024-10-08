@@ -5,7 +5,6 @@ import random
 from copy import deepcopy
 from typing import Tuple, Union
 
-from torchvision import transforms
 import cv2
 import numpy as np
 import torch
@@ -199,9 +198,7 @@ class Compose:
             >>> transformed_data = compose(input_data)
         """
         for t in self.transforms:
-            pass
-            #data = t(data)
-        trans = torchvision.transforms.ToTensor()
+            data = t(data)
         return trans(data)
 
     def append(self, transform):
