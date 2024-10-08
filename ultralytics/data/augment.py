@@ -199,7 +199,7 @@ class Compose:
         """
         for t in self.transforms:
             data = t(data)
-        return trans(data)
+        return data
 
     def append(self, transform):
         """
